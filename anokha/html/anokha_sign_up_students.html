@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Anokha Tech fest</title>
+    <link rel="icon" href="../images/icons8-party-popper-emoji-96.png" />
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.hero {
+  width: 100%;
+  height:200;
+  background:  linear-gradient(to top, #a8a8faba, #3204fdba,#ffffffba), url("../images/concert-gc855be71b_1280.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 100px;
+}
+.logo {
+  max-height: 60px;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+nav ul li a {
+  color: #1d1d24;
+  position: relative;
+  padding: 5px 0;
+}
+nav ul li a:hover {
+  color: #fd4766;
+}
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #fd4766;
+  transition: 0.3s;
+  bottom: 0;
+}
+nav ul li a:hover:after {
+  width: 100%;
+}
+.btn {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 16px 40px;
+  border-radius: 500px;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  background-size: 152% 100%;
+  background: #fd4766;
+  border: 2px solid #fd4766;
+}
+.btn:hover {
+  background: transparent;
+  border-color: #fd4766;
+  color: #fd4766;
+} 
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, ".SFNSText-Regular", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+}
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: #ccc;
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+.toggle-switch:before, .toggle-switch:after {
+  content: "";
+}
+.toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: left 0.25s;
+}
+.toggle:hover .toggle-switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background: #56c080;
+}
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: 30px;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+  
+  .space{
+    padding: .5em 2.5em .5em 2.5em;
+    border-radius: .5em;
+  
+  }
+
+  .columnright{
+      border-style: solid;
+      padding-bottom:2.5em;
+      padding-left:.5em;
+      flex:1;
+  
+  }
+  .columnleft{
+    text-align: center;
+    flex: 1;
+    margin-top: 150px;
+  }
+  
+.tacbox {
+  display: block;
+  padding: 1em;
+  margin: 2em;
+  border: 3px solid rgb(255, 117, 225);
+  
+  max-width: 800px;
+}
+</style>
+<div class="hero">
+   <nav>
+     <img src="../images/amrita_logo.png" class="logo" />
+     <ul>
+       <li><a href="../index.html">Home</a></li>
+       <li><a href="../html/anokha_about.html">About</a></li>
+       <li><a href="#">sponsers</a></li>
+       <li><a href="../html/anokha_sign_up_students.html">Registration</a></li>
+       <li><a href="#">faculty</a></li>
+       <li><a href="#">Contact</a></li>
+     </ul>
+   </nav>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+  <link rel="icon" href="images/favicon.jpeg">
+</head>
+
+</script>
+<div class= "flex-container">
+  <div class="columnleft" class="center">
+      <h1> READY TO PARTICIPATE IN THE ANOKHA TECHFEST?</h1>
+      <p  class= "center">We are welcoming all the colleges this year.
+      </p>
+    <P class= "center">All B.Tech and M.Tech Students can participate!!!</p>
+      <P class= "center"> We can't wait for you to present your IDEA!
+        Lots of exciting competitions are happening.<br>
+        <br>
+        Lots of amazing prizes to win!!!!!!!!!
+      </p>
+    </div>
+<div class="columnright" >
+  <center>
+  <h1 id= "title" style="color:rgb(220, 195, 36);"> Event Registration Form</h1><br><br></center>
+  <center>
+  <form class= "form">
+    <label for= "name" style="color:rgb(255, 0, 0);" ><b>First Name</b></label>
+    <div>
+    <input type= "text" placeholder="Enter your first name" name="name" class="space">
+    <br></div>
+    <label for= "name" style="color:rgb(255, 0, 0);" ><b>Last Name</b></label>
+    <div>
+    <input type= "text" placeholder="Enter your last name" name="name" class="space">
+    <br></div>
+    <label for= "name" style="color:rgb(255, 0, 0);" ><b>College</b></label>
+    <div>
+    <input type= "text" placeholder="Enter your college name" name="name" class="space">
+    </div>
+    <label for= "name" style="color:rgb(255, 0, 0);" ><b>Branch</b></label>
+    <div>
+      <select name="books" id="dropdown">
+        <option value="no input ">Select Branch</option>  
+        <option value="CSE">CSE</option>  
+        <option value="AIE">AIE</option>  
+        <option value="CYS">CYS</option>  
+        <option value="EEE">EEE</option>  
+        <option value="MECH">MECH</option>  
+        <option value="ELC">ELC</option>
+        <option value="ARE">ARE</option>
+        <option value="CHEM">CHEM</option>
+        <option value="CIVIL">CIVIL</option>
+    
+    </select>
+    </div>
+    <br>
+    <label for= "Year of study" style="color:red;"><b> Year of study</b></label>
+    <div>
+      <input type="radio" id="1st year" name="Year of study" value="male">
+      <label for="html">Freshmen year</label>  
+      <input type="radio" id="2nd year" name="Year of study" value="female">
+      <label for="css">sophomore year</label>
+      <input type="radio" id="3rd year" name="Year of study" value="others">
+      <label for="3rd year">junior year</label>
+      <input type="radio" id="4th year" name="Year of study" value="others">
+      <label for="3rd year">senior year</label>
+    </div>
+    <div>
+    <input type= "text" placeholder="Which year of college" name="name" class="space">
+    </div>
+    <label for= "name" style="color:rgb(255, 0, 0);" ><b>Intrested Domain:</b></label>
+    <div>
+      <input type="checkbox" id="skills" name="skils" value="skills">
+      <label for="vehicle1">CTF</label><br>
+      <input type="checkbox" id="skills" name="skils" value="skills">
+      <label for="vehicle2">Competitive Coding  </label><br>
+      <input type="checkbox" id="skills" name="skils" value="skills">
+      <label for="vehicle3">VAPT</label><br>  
+      <input type="checkbox" id="skills" name="skils" value="skills">
+      <label for="vehicle3">Bug Bounty</label><br>
+      <input type="checkbox" id="skills" name="skils" value="skills">
+      <label for="vehicle3">Cloud Computing</label><br>
+    </div>
+    <label for="phone" style="color:red;"><b>Phone</b></label>
+    <div>
+    <input type="tel" id= "phone" placeholder="Enter Mobile No." name= "name" class= "space">
+    </div>
+    <div>
+    <label for= "email" style="color:red;"><b>Email</b></label>
+    </div>
+    <div>
+    <input type= "text" placeholder="email@address.com" name="email" class= "space">
+    </div>
+    <label for= "start" style="color:red;"><b>Date of Birth</b></label>
+    <div>
+    <input type="date" id="start" name="start-date"
+    value= "2020-06-29" min="1997-06-29" max="2021-06-29" class= "space">
+    </div>
+    <label for= "gender" style="color:red;"><b> Gender</b></label>
+    <div>
+      <input type="radio" id="make" name="gender" value="male">
+      <label for="html">Male</label>  
+      <input type="radio" id="css" name="gender" value="female">
+      <label for="css">Female</label>
+      <input type="radio" id="others" name="gender" value="others">
+      <label for="javascript">Others</label>
+    </div>
+    <label for= "name" style="color:rgb(255, 0, 0);" ><b>Username</b></label>
+    <div>
+    <input type= "text" placeholder="Enter your username" name="name"  onchange= "NameCheck()" class="space">
+    </div>
+    <label for= "name" style="color:rgb(255, 0, 0);" ><b>Password</b></label>
+    <div>
+    <input type= "password" placeholder="Enter your password" id = password name="name" onchange="PasswordCheck()" class="space">
+    </div>
+    <label for= "name" style="color:rgb(255, 0, 0);" ><b>Retype Password</b></label>
+    <div>
+      <input type= "password" placeholder="Retype your password" id= "confirmpassword" name="name" onchange="passCh()" class="space">
+      </div>
+    <div>
+      <br>
+      <center><label for= "name" style="color:rgb(255, 0, 0);" ><b>Address:</b></label></center>
+      <textarea id="website" name="anokhafeedback" rows="4" cols="50">
+      </textarea>
+    </div>
+    <br>  
+    <center><label for= "name" style="color:rgb(255, 0, 0);" ><b>Upload your Aadhar Card:</b></label></center>
+    <br>
+    <center>
+<input type="file"
+ id="myfile" 
+accept=".jpg, .jpeg, .png" 
+name="myfile"/><br><br></center>
+<center><label for= "name" style="color:rgb(255, 0, 0);" ><b>Subscribed to Amrita events?</b></label></center>
+<br>
+<label class="toggle">
+  <input class="toggle-checkbox" type="checkbox">
+  <div class="toggle-switch"></div>
+  <span class="toggle-label"></span>
+</label><br>
+<div class="tacbox">
+<label for= "checkbox" style="color:rgb(255, 0, 0);" ><b>by checking you are accepting our <a href="#">Terms and Conditions</a></b></label>
+
+  <input id="checkbox" type="checkbox" required />
+  
+</div>
+    <br>
+    <center>
+      <br>
+      <br>
+      <center>
+      <button onclick="myFunction()" type= "submit" id= "submit">Register</button>
+      </div>
+    </center>
+    </form>
+    </div>
+    <script>
+          function myFunction() {
+    alert("Your submission has been recorded");
+    }
+
+      function NameCheck() {
+    var x = document.getElementById("Capname").value;
+    var y = x.split("")
+    let sp = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~'];
+    var arrLen = sp.length;
+    for (var i = 0; i < arrLen; i++) {
+        if (y.includes(sp[i])) {
+            alert("Special character present in Name please remove it")
+            document.getElementById("Capname").focus()
+            break
+        }
+    }
+
+  }
+
+
+function PasswordCheck() {
+    var Lendoc = document.getElementById("Len")
+    var Updoc = document.getElementById("Up")
+    var Lpdoc = document.getElementById("Lp")
+    var Nudoc = document.getElementById("Nu")
+    var Spdoc = document.getElementById("Sp")
+    var x = document.getElementById("password").value
+    var upper = /[A-Z]/g
+    var lower = /[a-z]/g
+    var number = /[0-9]/g
+    var sp = /[!@#$%^&*()]/g
+    var y = x.toString().length
+
+    if (y > 8) {
+        Lendoc.classList.remove("invalid")
+        Lendoc.classList.add("valid")
+    }
+    else {
+        Lendoc.classList.remove("valid")
+        Lendoc.classList.add("invalid")
+    }
+
+    if (!!x.match(upper)) {
+        Updoc.classList.remove("invalid")
+        Updoc.classList.add("valid")
+    }
+    else {
+        Updoc.classList.remove("valid")
+        Updoc.classList.add("invalid")
+    }
+
+    if (!!x.match(upper)) {
+        Updoc.classList.remove("invalid")
+        Updoc.classList.add("valid")
+    }
+    else {
+        Updoc.classList.remove("valid")
+        Updoc.classList.add("invalid")
+    }
+
+
+    if (!!x.match(lower)) {
+        Lpdoc.classList.remove("invalid")
+        Lpdoc.classList.add("valid")
+    }
+    else {
+        Lpdoc.classList.remove("valid")
+        Lpdoc.classList.add("invalid")
+    }
+
+
+    if (!!x.match(number)) {
+        Nudoc.classList.remove("invalid")
+        Nudoc.classList.add("valid")
+    }
+    else {
+        Nudoc.classList.remove("valid")
+        Nudoc.classList.add("invalid")
+    }
+
+
+
+    if (!!x.match(sp)) {
+        Spdoc.classList.remove("invalid")
+        Spdoc.classList.add("valid")
+    }
+    else {
+        Spdoc.classList.remove("valid")
+        Spdoc.classList.add("invalid")
+    }
+
+}
+
+
+function passCh() {
+    var p1 = document.getElementById("password").value
+    var p2 = document.getElementById("confirmpassword").value
+    if (p1 != p2) {
+        alert("Password is Not Same")
+        document.getElementById("confirmpassword").focus()
+    }
+
+}
+
+    </script>
+  </div>
+  </div>
+</center>
+</body>
+
+</html>
