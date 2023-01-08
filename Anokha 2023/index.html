@@ -1,0 +1,428 @@
+<!--
+Authors:Ruthwik Krishna
+Created Date:  01 Dec 2022
+Updated Date: 08 Jan 2023
+Base Template: NIL
+Description: This page is the index page of the ANOKA 2023-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>Anokha Tech fest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="icon" href="images/icons8-party-popper-emoji-96.png" />
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  background:  linear-gradient(to top, #3204fdba, #f9f9f8c3), url("./images/concert-gc855be71b_1280.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 100px;
+}
+.logo {
+  max-height: 60px;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+nav ul li a {
+  color: #1d1d24;
+  position: relative;
+  padding: 5px 0;
+  font-size: 20px;
+}
+nav ul li a:hover {
+  color: #fd4766;
+}
+nav ul li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #fd4766;
+  transition: 0.3s;
+  bottom: 0;
+}
+nav ul li a:hover:after {
+  width: 100%;
+}
+.btn {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 16px 40px;
+  border-radius: 500px;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  background-size: 152% 100%;
+  background: #fd4766;
+  border: 2px solid #fd4766;
+}
+.btn:hover {
+  background: transparent;
+  border-color: #fd4766;
+  color: #fd4766;
+}
+.content {
+  position: absolute;
+  top: 35%;
+  left: 8%;
+}
+.content .title {
+  color: #0a0a0a;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: inline-block;
+  margin-bottom: 20px;
+  background: linear-gradient(
+    120deg,
+    #0c3c64 20.69%,
+    #392376 50.19%,
+    #852d3b 79.69%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.content h1 {
+  color: #1f1f25;
+  font-size: 75px;
+  font-weight: 900;
+  line-height: 90px;
+  text-transform: inherit;
+  width: 70%;
+}
+.content h1 span {
+  color: #020730;
+}
+.content p {
+  width: 55%;
+  color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+footer{
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  
+  background: rgb(39, 4, 23);
+}
+footer .icontent{
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .icontent .box{
+  width: 33%;
+  transition: all 0.4s ease;
+}
+footer .icontent .topic{
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+
+}
+footer .icontent p{
+  text-align: justify;
+  color:rgb(255, 213, 213);
+}
+footer .icontent .lower .topic{
+  margin: 24px 0 5px 0;
+}
+footer .icontent .lower i{
+  padding-right: 16px;
+}
+footer .icontent .middle{
+  padding-left: 80px;
+}
+footer .icontent .middle a{
+  line-height: 32px;
+}
+footer .icontent .right input[type="text"]{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  color: #d9d9d9;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 2px solid #222222;
+}
+footer .icontent .right input[type="submit"]{
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  color: #d9d9d9;
+  background: #eb2f06;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 12px;
+  border: 2px solid #eb2f06;
+  transition: all 0.3s ease-in-out;
+}
+.icontent .right input[type="submit"]:hover{
+  background: none;
+  color:  #eb2f06;
+}
+footer .icontent .media-icons a{
+  font-size: 16px;
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  border-radius: 5px;
+  border: 2px solid #eaeaea;
+  margin: 30px 5px 0 0;
+  transition: all 0.3s ease;
+}
+.icontent .media-icons a:hover{
+  border-color: #eb2f06;
+}
+footer .bottom{
+  width: 100%;
+  text-align: center;
+  color: #d9d9d9;
+  padding: 0 40px 5px 0;
+}
+footer .bottom a{
+  color: #eb2f06;
+}
+footer a{
+  transition: all 0.3s ease;
+}
+footer a:hover{
+  color: #eb2f06;
+}
+@media (max-width:1100px) {
+  footer .content .middle{
+    padding-left: 50px;
+  }
+}
+@media (max-width:950px){
+  footer .content .box{
+    width: 50%;
+  }
+  .icontent .right{
+    margin-top: 40px;
+  }
+}
+@media (max-width:560px){
+  footer{
+    position: fixed;
+  }
+  footer .icontent .box{
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .icontent .middle{
+    padding-left: 0;
+  }
+}
+.schedule {
+  padding: 30px;
+}
+
+.schedule table {
+  border-collapse: collapse;
+  width: 100%;
+  background-image: inherit;
+  background-size: cover;
+
+}
+
+.schedule th,
+.schedule td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.schedule th {
+  background-color: #fd4766;
+  color: white;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  .schedule th,
+  .schedule td {
+    font-size: 14px;
+  }
+}
+
+</style>
+  </head>
+  <body>
+    <div class="hero">
+      <nav>
+        <img src="./images/amrita_logo.png" class="logo" />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="./html/anokha_about.html">About</a></li>
+          <li><a href="./html/anokha_sign_up_students.html">Registration</a></li>
+          <li><a href="./html/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <span class="title">Amrita Vishwavidyapeetham coimbatore's </span>
+        <h1> <span>ANOKHA TECH FEST 
+            2023</span></h1>
+        <p>
+            Anokha Techfest, the annual event of Amrita School of Engineering, Coimbatore provides an unique opportunity for students to participate in fun-filled and challenging events and workshops.
+        </p>
+      </div>
+    </div>
+    <div class="schedule">
+      <h2>Event schedule</h2>
+      <table>
+        <tr>
+          <th>Time</th>
+          <th>Event</th>
+          <th>Location</th>
+          <th>Day</th>
+        </tr>
+        <tr>
+          <td>9:00 AM</td>
+          <td>Registration</td>
+          <td>Main Lobby</td>
+          <td>Day 1</td>
+        </tr>
+        <tr>
+          <td>10:00 AM</td>
+          <td>Opening Ceremony</td>
+          <td>Auditorium</td>
+          <td>Day 1</td>
+        </tr>
+        <tr>
+          <td>11:00 AM</td>
+          <td>Keynote Speaker: John Smith</td>
+          <td>Auditorium</td>
+          <td>Day 1</td>
+        </tr>
+        <tr>
+          <td>12:00 PM</td>
+          <td>Lunch Break</td>
+          <td>Cafeteria</td>
+          <td>Day 1</td>
+        </tr>
+        <tr>
+          <td>1:00 PM</td>
+          <td>Workshop: Introduction to Artificial Intelligence</td>
+          <td>Classroom 1</td>
+          <td>Day 1</td>
+        </tr>
+        <tr>
+          <td>2:00 PM</td>
+          <td>Panel Discussion: The Future of Technology</td>
+          <td>Auditorium</td>
+          <td>Day 1</td>
+        </tr>
+        <tr>
+          <td>3:00 PM</td>
+          <td>Networking Event</td>
+          <td>Lobby</td>
+          <td>Day 1</td>
+        </tr>
+        <tr>
+          <td>9:00 AM</td>
+          <td>Workshop: Web Development</td>
+          <td>Classroom 2</td>
+          <td>Day 2</td>
+        </tr>
+        <tr>
+          <td>10:00 AM</td>
+          <td>Keynote Speaker: Jane Doe</td>
+          <td>Auditorium</td>
+          <td>Day 2</td>
+        </tr>
+        <!-- Add additional rows for events on Day 2 and Day 3 here -->
+      </table>
+    </div>
+    
+    <footer>
+      <div class="icontent">
+        <div class="left box">
+          <div class="upper">
+            <div class="topic">About us</div>
+            <p>Amrita Vishwa Vidyapeetham is a NAAC accredited A grade, multi-campus, multi-disciplinary teaching and research institution.
+            </p>
+          </div>
+          <div class="lower">
+            <div class="topic">Contact us</div>
+            <div class="phone">
+              <a href="#"><i class="fas fa-phone-volume"></i>+007 9089 6767</a>
+            </div>
+            <div class="email">
+              <a href="#"><i class="fas fa-envelope"></i>anokhacomm@amrita.events.edu</a>
+            </div>
+          </div>
+        </div>
+        <div class="middle box">
+          <div class="topic">About Amrita</div>
+          <div><a href="https://www.amrita.edu/rankings/">Rankings</a></div>
+          <div><a href="https://www.amrita.edu/about/awards-accreditations/">Accreditation</a></div>
+          <div><a href="https://www.amrita.edu/about/leadership/">leadership</a></div>
+          <div><a href="https://www.amrita.edu/international/international-newsletter/">Newsletter</a></div>
+          <div><a href="https://www.amrita.edu/press-media/">Press Media</a></div>
+          <div><a href="https://amrita.edu/governance/?page=1">Governance</a></div>
+        </div>
+        <div class="right box">
+          <div class="topic">Subscribe us</div>
+          <form action="#">
+            <input type="text" placeholder="Enter email address">
+            <input type="submit" name="" value="Send">
+            <div class="media-icons">
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>Copyright © 2022-2023 Anokha - <a href="#">Ruthwik Krishna.</a> </br>II B.Tech CSE (CYS)</br> Part of 20CYS202 - User Interface Design</br>Amrita Vishwa Vidyapeetham, Coimbatore</p>
+      </div>
+    </footer>
+  </body>
+</html>
