@@ -1,7 +1,7 @@
 <!--
 Authors:Ruthwik Krishna
 Created Date:  01 Dec 2022
-Updated Date: 08 Jan 2023
+Updated Date: 15 Jan 2023
 Base Template: NIL
 Description: This page describes about how to contact the organiztion by filling up the form -->
 <!DOCTYPE html>
@@ -339,6 +339,7 @@ footer a:hover{
         Lots of amazing prizes to win!!!!!!!!!
       </p>
     </div>
+
 <div class="columnright" >
   <center>
   <h1 id= "title" style="color:rgb(220, 195, 36);"> Event Registration Form</h1><br><br></center>
@@ -346,7 +347,7 @@ footer a:hover{
   <form class= "form">
     <label for= "name" style="color:rgb(255, 0, 0);" ><b>First Name</b></label>
     <div>
-    <input type= "text"required placeholder="Enter your first name" name="name" class="space">
+    <input type= "text"required placeholder="Enter your first name" id="name" onchange="NameCheck()"class="space">
     <br></div>
     <label for= "name" style="color:rgb(255, 0, 0);" ><b>Last Name</b></label>
     <div>
@@ -387,28 +388,29 @@ footer a:hover{
 
     <label for= "name" style="color:rgb(255, 0, 0);" ><b>Intrested Domain:</b></label>
     <div>
-      <input aria-label="State" type="checkbox" id="skills" name="skils" value="skills">
+      <input aria-label="State" type="checkbox" id="CTF" name="skils" value="skills">
       <label aria-label="State" for="vehicle1">CTF</label><br>
-      <input aria-label="State" type="checkbox" id="skills" name="skils" value="skills">
+      <input aria-label="State" type="checkbox" id="CP" name="skils" value="skills">
       <label for="vehicle2">Competitive Coding  </label><br>
-      <input  aria-label="State" type="checkbox" id="skills" name="skils" value="skills">
+      <input  aria-label="State" type="checkbox" id="VAPT" name="skils" value="skills">
       <label for="vehicle3">VAPT</label><br>  
-      <input aria-label="State" type="checkbox" id="skills" name="skils" value="skills">
+      <input aria-label="State" type="checkbox" id="BB" name="skils" value="skills">
       <label for="vehicle3">Bug Bounty</label><br>
-      <input aria-label="State" type="checkbox" id="skills" name="skils" value="skills">
+      <input aria-label="State" type="checkbox" id="CC" name="skils" value="skills">
       <label for="vehicle3">Cloud Computing</label><br>
     </div>
     <label for="phone" style="color:red;"><b>Phone</b></label>
     <div>
-    <input type="tel" id= "phone" placeholder="Enter Mobile No." name= "name" class= "space">
-    </div>
+    <input type="tel" required id= "phonenumber" onchange="PhoneNumberCheck()" placeholder="Enter Mobile No." name= "name" class= "space">
+    </div><br>
     <div>
-    <label for= "email" style="color:red;"><b>Email</b></label>
+      <label for= "email" style="color:red;"><b>Email</b></label><br>
+      <input type= "email" required id="email" onchange="validateEmail()"p laceholder="email@address.com" name="email" class= "space" >
+
     </div>
-    <div>
-    <input type= "text" required id="email" placeholder="email@address.com" name="email" class= "space"onchange= "ValidateEmail()">
-    </div>
-    <label for= "start" style="color:red;"><b>Date of Birth</b></label>
+  
+  
+    <label for = "start" style="color:red;"><b>Date of Birth</b></label>
     <div>
     <input type="date" required id="start" name="start-date"
     value= "2020-06-29" min="1997-06-29" max="2021-06-29" class= "space">
@@ -424,16 +426,16 @@ footer a:hover{
     </div>
     <label for= "name" style="color:rgb(255, 0, 0);" ><b>Username</b></label>
     <div>
-    <input type= "text" required placeholder="Enter your username" name="name"  onchange= "NameCheck()" class="space">
+    <input type= "text" required placeholder="Enter your username" name="name"  = class="space">
     </div>
     <label for= "name" style="color:rgb(255, 0, 0);" ><b>Password</b></label>
     <div>
-      +
-    <input type= "password" required placeholder="Enter your password" id = password name="name" onchange="PasswordCheck()" class="space">
+    
+    <input type= "password" required placeholder="Enter your password" id = password onchange="PassCheck()" name="name" class="space">
     </div>
     <label for= "name" style="color:rgb(255, 0, 0);" ><b>Retype Password</b></label>
     <div>
-      <input type= "password" placeholder="Retype your password" id= "confirmpassword" name="name" onchange="passCh()" class="space">
+      <input type= "password" placeholder="Retype your password" id= "confirmpassword" name="name" class="space">
       </div>
     <div>
       <br>
@@ -467,7 +469,7 @@ name="myfile"/><br><br></center>
       <br>
       <br>
     <center>
-      <button onclick="myFunction()" type= "submit" id= "submit">Register</button>
+      <button onclick="Register()" type= "submit" id= "submit">Register</button>
       </div>
     </center>
     </form>
@@ -519,150 +521,67 @@ name="myfile"/><br><br></center>
       </div>
 </footer>
   </body>
+  <script>
+    
+
+    function Register(){
+    if(validateEmail() && PhoneNumberCheck() && NameCheck() && PassCheck()){
+    alert("You have successfully registered for the Fest.");
+    }
+}
 
 
+function validateEmail() {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var x = document.getElementById("email").value;
+    if (!x.match(mailformat)) {
+        alert("You have entered an invalid email address.Please enter a valid email address.");
+        document.getElementById("email").focus()
+        return false
+    }
+    return true
+}
 
-    <script>
-      
-          function myFunction() {
-           
+function PhoneNumberCheck() {
 
-              if (document.getElementById("Capname").value && document.getElementById("password").value && document.getElementById("confirmpassword").value && document.getElementById("email").value) {
+    var x = document.getElementById("phonenumber").value;
+    console.log(x)
+    if (!(x.length == 10)) {
+        alert("You have entered an invalid phone number. Please enter a valid phone number.")
+        document.getElementById("phonenumber").focus()
+        return false
+    }
+    return true
+}
 
-              
-                alert("Your submission has been recorded");
-              }
-              else{
-                alert("there are errors in your page");
-              }
-            }
-          
-
-  function NameCheck() {
-    var x = document.getElementById("Capname").value;
+function NameCheck() {
+    var x = document.getElementById("name").value;
     var y = x.split("")
     let sp = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~'];
     var arrLen = sp.length;
     for (var i = 0; i < arrLen; i++) {
         if (y.includes(sp[i])) {
-            alert("Special character present in Name please remove it")
-            document.getElementById("Capname").focus()
+            alert("You have entered an invalid name. Special characters are present in the name. Enter a Valid Name")
+            document.getElementById("name").focus()
+            return false
             break
+
         }
+        return true
     }
-
-  }
-
-
-function PasswordCheck() {
-    var Lendoc = document.getElementById("Len")
-    var Updoc = document.getElementById("Up")
-    var Lpdoc = document.getElementById("Lp")
-    var Nudoc = document.getElementById("Nu")
-    var Spdoc = document.getElementById("Sp")
-    var x = document.getElementById("password").value
-    var upper = /[A-Z]/g
-    var lower = /[a-z]/g
-    var number = /[0-9]/g
-    var sp = /[!@#$%^&*()]/g
-    var y = x.toString().length
-
-    if (y > 8) {
-        Lendoc.classList.remove("invalid")
-        Lendoc.classList.add("valid")
-    }
-    else {
-        Lendoc.classList.remove("valid")
-        Lendoc.classList.add("invalid")
-    }
-
-    if (!!x.match(upper)) {
-        Updoc.classList.remove("invalid")
-        Updoc.classList.add("valid")
-    }
-    else {
-        Updoc.classList.remove("valid")
-        Updoc.classList.add("invalid")
-    }
-
-    if (!!x.match(upper)) {
-        Updoc.classList.remove("invalid")
-        Updoc.classList.add("valid")
-    }
-    else {
-        Updoc.classList.remove("valid")
-        Updoc.classList.add("invalid")
-    }
-
-
-    if (!!x.match(lower)) {
-        Lpdoc.classList.remove("invalid")
-        Lpdoc.classList.add("valid")
-    }
-    else {
-        Lpdoc.classList.remove("valid")
-        Lpdoc.classList.add("invalid")
-    }
-
-
-    if (!!x.match(number)) {
-        Nudoc.classList.remove("invalid")
-        Nudoc.classList.add("valid")
-    }
-    else {
-        Nudoc.classList.remove("valid")
-        Nudoc.classList.add("invalid")
-    }
-
-
-
-    if (!!x.match(sp)) {
-        Spdoc.classList.remove("invalid")
-        Spdoc.classList.add("valid")
-    }
-    else {
-        Spdoc.classList.remove("valid")
-        Spdoc.classList.add("invalid")
-    }
-
 }
 
-
-function passCh() {
-    var p1 = document.getElementById("password").value
-    var p2 = document.getElementById("confirmpassword").value
-    if (p1 != p2) {
-        alert("Password is Not Same")
-        document.getElementById("confirmpassword").focus()
+function PassCheck(){
+    var a = document.getElementById("password").value;
+    if (!(a.length>3 && a.length<24)){
+         alert("Invalid Password . Please enter a valid password")
+         return false;
     }
-
+    return true;
 }
-function ValidateEmail(input) {
+  </script>
 
-var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-if (input.value.match(validRegex)) {
-
-  alert("Valid email address!");
-
-  document.form1.text1.focus();
-
-  return true;
-
-} else {
-
-  alert("Invalid email address!");
-
-  document.form1.text1.focus();
-
-  return false;
-
-}
-
-}
-
-    </script>
-  </div>
   </div>
 </center>
 </body>
